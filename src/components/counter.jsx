@@ -16,6 +16,10 @@ class Counter extends Component {
   //   // </ul>
   // }
 
+  componentWillUnmount() {
+    console.log("about to remove element!");
+  }
+
   render() {
     // console.log(this.props);
     return (
