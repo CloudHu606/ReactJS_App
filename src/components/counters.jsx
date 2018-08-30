@@ -11,16 +11,14 @@ class Counters extends Component {
           Reset
         </button>
         <button className="btn btn-primary btn-sm m2">Add</button>
-        {this.props.counters.map(counter => (
+        {counters.map(counter => (
           <Counter
             key={counter.id}
             onDelete={onDelete}
             onIncrement={onIncrement}
             onDecrease={onDecrease}
             counter={counter}
-          >
-            {/* <h4>Counter #{counter.id}</h4> */}
-          </Counter>
+          />
         ))}
       </div>
     );

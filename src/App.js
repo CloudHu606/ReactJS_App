@@ -25,11 +25,13 @@ class App extends Component {
   };
 
   handleDecrease = counter => {
-    // const counters = [...this.state.counters];
-    // const index = counters.indexOf(counter);
-    // counters[index] = [...counter];
-    // counters[index].value--;
-    // this.setState({ counters });
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    if (counters[index].value > 0) {
+      counters[index].value--;
+    }
+    this.setState({ counters });
   };
 
   handleDelete = counterId => {
